@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dynamodb-repository-demo
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only
+server:
+  port: 9090
+
+aws:
+  dynamodb:
+    accessKey: key
+    secretKey: key
+    endpoint: http://localhost:8000
+    region: ap-south-1
