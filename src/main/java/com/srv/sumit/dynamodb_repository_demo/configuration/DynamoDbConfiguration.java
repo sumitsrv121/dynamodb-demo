@@ -34,12 +34,18 @@ public class DynamoDbConfiguration {
                 new BasicAWSCredentials(accessKey, secretKey));
     }
 
+    /*
+     * If you want to use jpa repository, then no need for this
+     */
     @Primary
     @Bean
     public DynamoDBMapperConfig dynamoDBMapperConfig() {
         return DynamoDBMapperConfig.DEFAULT;
     }
 
+    /*
+     * If you want to use jpa repository, then no need for this
+     */
     @Bean
     @Primary
     public DynamoDBMapper dynamoDBMapper(AmazonDynamoDB amazonDynamoDB,
